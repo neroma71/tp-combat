@@ -3,8 +3,15 @@
     require_once("utils/loadClass.php");
 
 
+        $heroRepo = new HeroRepository($bdd);
+        $hero = $heroRepo->find($_GET['id']);
+
         $fightManager = new FightRepository();
         $monster = $fightManager->createMonster();
-        $hero = new HeroRepository($bdd);
 
+        $bastons = $fightManager->fight($hero, $monster);
+        
+        foreach($bastons as $baston){
+            echo $baston."<br />";
+        }
 ?>

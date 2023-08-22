@@ -81,6 +81,8 @@
                 $degat = rand(0, 10);
                 $monsterHp = $monster->getHealt_point();
                 $monster->setHealt_point($monsterHp - $degat);
+
+                return $degat;
             }
 
     }

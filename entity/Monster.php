@@ -54,6 +54,8 @@
         public function hit(Hero $hero){
             $degat = rand(0, 10);
             $heroHp = $hero->getHealt_point();
-            $hero->$hero->setHealt_point($heroHp - $degat);
+            $hero->setHealt_point($heroHp - $degat);
+
+            return $degat;
         }
     }

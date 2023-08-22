@@ -56,9 +56,10 @@
         $statement->execute();
         $hero = $statement->fetch();
 
-        $newHero = new Hero($hero['name']);
+        $newHero = new Hero([]);
+        $newHero->setName($hero['name']);
         $newHero->setId($hero['id']);
-        $newHero->setHealt_point($hero['health_point']);
+        $newHero->setHealt_point($hero['healt_point']);
 
         return $newHero;
     }
