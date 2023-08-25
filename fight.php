@@ -60,6 +60,9 @@
         mydiv.style.display = "block";
             count++;
             mydiv.innerHTML = baston[count];
+            if(count > baston.length - 1){
+                document.location.href="index.php";
+            }
          });
     
 
