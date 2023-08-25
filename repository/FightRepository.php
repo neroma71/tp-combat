@@ -28,23 +28,23 @@
             while($hero->getHealt_point() > 0 && $monster->getHealt_point() >0 )
             {
                 $damage = $monster->hit($hero);
-                $bastons[] = "<h3>". $monster->getName()."</h3><p> inflige à ".$hero->getName()." ". $damage . " point de dégats <br /> pv restant ". $hero->getHealt_point(). " </p>";
+                $bastons[] = "<div class='monster'><h3>". $monster->getName()."</h3><p> inflige à ".$hero->getName()." ". $damage . " point de dégats <br /> pv restant ". $hero->getHealt_point(). " </p></div>";
 
                 if($hero->getHealt_point() > 0 && method_exists($hero, 'specialAttack')){
                     $specialDamage = $hero->specialAttack($monster);
                     $damage = $hero->hit($monster);
-                    $bastons[] = "<h3>".$hero->getName()."</h3><p> inflige à ".$monster->getName()." ". ($damage + $specialDamage)." point de dégat avec son attaque spéciale de ".$specialDamage." et son attaque normale de ".$damage."<br /> pv restant ".$monster->getHealt_point()."</p>";
+                    $bastons[] = "<div class='hero'><h3>".$hero->getName()."</h3><p> inflige à ".$monster->getName()." ". ($damage + $specialDamage)." point de dégat avec son attaque spéciale de ".$specialDamage." et son attaque normale de ".$damage."<br /> pv restant ".$monster->getHealt_point()."</p></div>";
                 }
 
                 
             }
         if($hero->getHealt_point() < 1){
-            $bastons[] = "<h3>".$hero->getName()." est mort vous perdez 15$</h3>";
-            header("Refresh:15; ./index.php");
+            $bastons[] = "<h3>".$monster->getName()." vous a mis une bonne branlée vous perdez 15$</h3>";
+           // header("Refresh:35; ./loose.php");
 
         }else{
-            $bastons[] = "<h3>".$monster->getName()." est mort vous gagnez 15$</h3>";
-            header("Refresh:15; ./index.php");
+            $bastons[] = "<h3>".$hero->getName()." a botté le cul de ".$monster->getName()." vous gagnez 15$</h3>";
+            //header("Refresh:35; ./win.php?id=".$hero->getId());
         }
         return $bastons;
         }

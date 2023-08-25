@@ -12,7 +12,7 @@ body{
     font-family: 'Sedgwick Ave Display', cursive;
     font-size:100px;
     text-align:center;
-    color:rgb(227, 122, 122);
+    color:rgb(251, 11, 11);
 }
 label{
     color:white;
@@ -28,9 +28,15 @@ label{
     background:rgba(0,0,0,0.5);
     color:white;
     border-radius:15px;
+    overflow:hidden;
 }
 .col-3 img{
     height:200px;
     width:200px;
     object-fit:cover;
+}
+label{
+    font-family: 'Sedgwick Ave Display', cursive;
+    font-size:20px;
+    color:rgb(233, 22, 22);
 }

@@ -3,9 +3,9 @@
     require_once("utils/loadClass.php");
 
     $monsterConfigs = [
-        ['name' => 'Sorcier', 'healt_point' => 110, 'images' => 'images/ho-chi-minh.jpg'],
-        ['name' => '0gre', 'healt_point' => 130, 'images' => 'images/pol_pot.jpg'],
-        ['name' => 'Fantassin', 'healt_point' => 120, 'images' => 'images/kim.png']
+        ['id'=>1, 'name' => 'ho-chi-min', 'healt_point' => 110, 'images' => 'images/ho-chi-minh.jpg'],
+        ['id'=>2,'name' => 'pol-pot', 'healt_point' => 130, 'images' => 'images/pol_pot.jpg'],
+        ['id'=>3,'name' => 'kim jung un', 'healt_point' => 120, 'images' => 'images/kim.png']
     ];
 
 
@@ -37,8 +37,9 @@
         </div>
         <div class="block-img" id="m2"><img src="<?php echo $monster->getImages(); ?>"></div>
     </div>
+    <button class="btn">fight</button>
         <div class="row justify-content-center m-5">
-            <div class="col-7 text-center mt-2">
+            <div class="col-7 text-center mt-2 mydiv">
             <?php
                 foreach($bastons as $baston){
                 echo $baston."<br />";
@@ -47,5 +48,21 @@
             </div>
         </div>
     </section>
+<script>
+    let monster = document.querySelector('.monster');
+    let hero = document.querySelector('.hero');
+    let mydiv = document.querySelector('.mydiv');
+    let next = document.querySelector('.btn');
+    let count = 0;
+    mydiv.style.display = "none";
+    next.addEventListener('click', ()=>{
+        let baston = <?php echo json_encode($bastons); ?>;
+        mydiv.style.display = "block";
+            count++;
+            mydiv.innerHTML = baston[count];
+         });
+    
+
+</script>
 </body>
 </html>

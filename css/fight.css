@@ -39,4 +39,15 @@ img{
 .col-7 h3, p{
     font-size:20px;
     color:white;
+
+}
+.btn{
+    height:40px;
+    width:100px;
+    background:lime;
+    border:1px solid white;
+    border-radius:10px;
+}
+.btn:hover{
+    background:red;
 }

@@ -2,7 +2,8 @@
         class Archer extends Hero
         {
             
-        public function __construct(array $datas){
+        public function __construct(array $datas)
+        {
                 parent::__construct($datas);
         }
         public function specialAttack(Monster $monster){

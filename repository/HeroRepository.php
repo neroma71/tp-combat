@@ -80,7 +80,9 @@
 
     public function find($id):Hero
     {
-        $statement = $this->getDb()->prepare("SELECT * FROM heroes WHERE id=$id");
+        $sql = 'SELECT * FROM heroes WHERE id = :id';
+        $statement = $this->getDb()->prepare($sql);
+        $statement->bindValue(':id', $id, PDO::PARAM_INT);
         $statement->execute();
         $hero = $statement->fetch();
 
