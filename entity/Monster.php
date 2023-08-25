@@ -4,11 +4,33 @@
     {
         private string $name;
         private int $healt_point;
+        private $images;
 
-        public function __construct($name, $healt_point)
+        public function __construct($name, $healt_point, $images)
         {
              $this->name = $name;
              $this->healt_point = $healt_point;
+             $this->images = $images;
+        }
+
+        /**
+         * Get the value of images
+         */ 
+        public function getImages()
+        {
+                return $this->images;
+        }
+
+        /**
+         * Set the value of images
+         *
+         * @return  self
+         */ 
+        public function setImages($images)
+        {
+                $this->images = $images;
+
+                return $this;
         }
 
         /**
@@ -52,10 +74,11 @@
         }
 
         public function hit(Hero $hero){
-            $degat = rand(0, 10);
+            $degat = rand(0, 50);
             $heroHp = $hero->getHealt_point();
             $hero->setHealt_point($heroHp - $degat);
 
             return $degat;
         }
+
     }
