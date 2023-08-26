@@ -40,11 +40,11 @@
             }
         if($hero->getHealt_point() < 1){
             $bastons[] = "<h3>".$monster->getName()." vous a mis une bonne branlée vous perdez 15$</h3>";
-           // header("Refresh:35; ./loose.php");
+        // header("Refresh:20; ./loose.php");
 
         }else{
             $bastons[] = "<h3>".$hero->getName()." a botté le cul de ".$monster->getName()." vous gagnez 15$</h3>";
-            //header("Refresh:35; ./win.php?id=".$hero->getId());
+           // header("Refresh:20; ./win.php?id=".$hero->getId());
         }
         return $bastons;
         }

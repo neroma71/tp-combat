@@ -1,3 +1,6 @@
+<?php
+    header("Refresh:7; ./index.php");
+?>
 <!DOCTYPE html>
 <html lang="">
 <head>

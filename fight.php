@@ -34,8 +34,16 @@
     <div class="row d-flex justify-content-center">
         <div class="block-img">
             <img src="<?php echo $hero->getImages(); ?>" alt="profile joueur">
+            <p><?php echo $hero->getName(); ?></p>
         </div>
-        <div class="block-img" id="m2"><img src="<?php echo $monster->getImages(); ?>"></div>
+        <div class="block-img" id="m2">
+            <img src="<?php echo $monster->getImages(); ?>">
+            <p><?php echo $monster->getName(); ?></p>
+        </div>
+        <div id="block_point">
+        <p class='point'>pv <?php echo $hero->getHealt_point(); ?></p>
+        <p class='point'>pv <?php echo $monster->getHealt_point(); ?></p>
+        </div>
     </div>
     <button class="btn">fight</button>
         <div class="row justify-content-center m-5">
@@ -49,10 +57,12 @@
         </div>
     </section>
 <script>
+    let contain = document.querySelector('#block_point');
     let monster = document.querySelector('.monster');
     let hero = document.querySelector('.hero');
     let mydiv = document.querySelector('.mydiv');
     let next = document.querySelector('.btn');
+    let points = document.querySelectorAll('.point');
     let count = 0;
     mydiv.style.display = "none";
     next.addEventListener('click', ()=>{
@@ -60,8 +70,17 @@
         mydiv.style.display = "block";
             count++;
             mydiv.innerHTML = baston[count];
+            for(let point of points){
+                point.style.display = 'none';
+                if(count > baston.length - 2){
+                    point.style.display = 'block'; 
+                }
+            }
+            if(count > baston.length - 2){
+                next.textContent = "next";
+            }
             if(count > baston.length - 1){
-                document.location.href="index.php";
+                document.location.href="bganim3.php";
             }
          });
     

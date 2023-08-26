@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap');
 body{
     margin:0;
     padding:0;
@@ -9,7 +9,7 @@ body{
 }
 h1{
     width:100%;
-    font-family: 'Sedgwick Ave Display', cursive;
+    font-family: 'Black Ops One', cursive;
     font-size:100px;
     text-align:center;
     color:rgb(227, 122, 122);
@@ -32,7 +32,46 @@ img{
     z-index:10;
     object-fit:cover;
 }
+.block-img p{
+    position:relative;
+    width:100%;
+    top:75%;
+    text-align:center;
+    font-family: 'Black Ops One', cursive;
+    font-size:15px;
+    color:white;
+    background:rgb(227, 122, 122);
+    z-index:100;
+    
+}
+#block_point{
+    position:relative;
+    width:100%;
+    height:70px;
+    top:-150px;
+    margin-bottom:10px;
+    display:flex;
+    justify-content:space-between;
+   
+}
+.point{
+    position:relative;
+    z-index:100;
+    width:70px;
+    height:70px;
+    margin:0 80px;
+    font-family: 'Black Ops One', cursive;
+    font-size:15px;
+    color:white;
+    text-align:center;
+    line-height:60px;
+    border-radius:100%;
+    display:none;
+    background:rgba(227, 122, 122,0.7);
+}
 .col-7{
+    position:relative;
+    top:-100px;
     background:rgba(0, 0, 0, 0.5);
     border-radius:15px;
 }
@@ -42,12 +81,19 @@ img{
 
 }
 .btn{
+    position:relative;
     height:40px;
-    width:100px;
-    background:lime;
+    width:50%;
+    left:50%;
+    top:-90px;
+    transform:translateX(-50%);
+    font-family: 'Black Ops One', cursive;
+    color:white;
+    background:rgba(255,255,255,0.5);
     border:1px solid white;
     border-radius:10px;
 }
 .btn:hover{
-    background:red;
+    background:rgb(227, 122, 122);
+    border:1px solid white;
 }
