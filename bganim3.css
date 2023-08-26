@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap');
+*{
+    margin:0;
+    padding:0;
+       font-family: 'Black Ops One', cursive;
+}
+body{
+    height:100%;
+    width:100%;
+}
+.home{
+    position:relative;
+    width:100%;
+    height:100vh;
+    background:url(../images/bombe_hydrogene.jpg)top center fixed no-repeat;
+    background-size:cover;
+    overflow:hidden;
+}
+h1{
+    position:fixed;
+    width:100%;
+    height:500px;
+    font-size:250px;
+    text-align:center;
+    top:30%;
+    margin-top:-150px;
+    background:url(../images/flammes.jpg)bottom no-repeat;
+    background-size:cover;
+     background-clip: text;
+     -webkit-background-clip: text;
+    color:transparent;
+    opacity:0;
+    z-index:100;
+    animation:texte 0.5s linear 1s forwards;
+}
+@keyframes texte{
+    0%
+    {
+        top:-100%;
+        opacity:0;
+    }
+    100%
+    {
+        top:30%;
+        opacity:1;
+    }
+}
+h2{
+    position:fixed;
+    width:100%;
+    height:500px;
+    font-size:250px;
+    text-align:center;
+    top:0%;
+    margin-top:-150px;
+    background:url(../images/flammes.jpg)bottom no-repeat;
+    background-size:cover;
+     background-clip: text;
+     -webkit-background-clip: text;
+    color:transparent;
+    opacity:0;
+    z-index:100;
+    animation:texte2 1s ease 1s forwards;
+}
+@keyframes texte2{
+    0%
+    {
+        top:-100%;
+        opacity:0;
+    }
+    100%
+    {
+        top:60%;
+        opacity:1;
+    }
+}
+.banner{
+    position:absolute;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    display:flex;
+    flex-wrap: wrap;
+    perspective:500px;
+    transform-style:preserve-3d;
+    overflow:hidden;
+}
+p{
+    position:fixed;
+    width:100%;
+    top:40%;
+    left:-100%;
+    text-align:center;
+    font-size:50px;
+    color:white;
+    opacity:0;
+    z-index:100;
+     animation:texte3 1s ease-in 1s forwards;
+    
+}
+@keyframes texte3{
+    0%
+    {
+        opacity:0;
+         left:-100%;
+    }
+    100%
+    {
+        opacity:1;
+         left:0;
+    }
+}
+.blocks{
+    position:relative;
+    display:inline;
+    width:50px;
+    height:50px;
+    left:0;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    animation:animate 10s linear 1s infinite alternate;
+}
+@keyframes animate{
+    0%
+    {
+        transform: translateZ(0px);
+        background:rgba(255, 52, 23, 0.4);
+        box-shadow:5px 5px 5px rgba(0, 0, 0, 0.5);
+    }
+    100%
+    {
+        transform: translateZ(500px);
+        background:rgba(245, 239, 66, 0.4);
+        box-shadow:5px 5px 5px rgba(0, 0, 0, 0.5);
+    }
+}
+@media screen and (max-width:1024px){
+    h1, h2{
+        font-size:150px;
+    }
+    p{
+        top:30%;
+    }
+}
+@media screen and (max-width:768px){
+    h1, h2{
+        font-size:100px;
+        top:50%;
+    }
+        p{
+        top:70%;
+    }
+}
+
+
+
