@@ -71,7 +71,7 @@
                 case 'archer':
                     $herosdatas[] = new Archer($herodata, 100);
                     break;
-                // Ajoute d'autres catégories si nécessaire
+                // Ajout d'autres catégories
             }
         }
         

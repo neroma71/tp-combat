@@ -9,6 +9,6 @@
             
         public function specialAttack(Monster $monster){
                 $degat = parent::hit($monster);              
-                return $degat * 2;
+                return $degat * 1.7;
                     }
         }

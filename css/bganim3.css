@@ -31,7 +31,7 @@ h1{
     color:transparent;
     opacity:0;
     z-index:100;
-    animation:texte 0.5s linear 1s forwards;
+    animation:texte linear 1s forwards;
 }
 @keyframes texte{
     0%
@@ -60,7 +60,7 @@ h2{
     color:transparent;
     opacity:0;
     z-index:100;
-    animation:texte2 1s ease 1s forwards;
+    animation:texte2 ease 1s forwards;
 }
 @keyframes texte2{
     0%
@@ -89,14 +89,14 @@ h2{
 p{
     position:fixed;
     width:100%;
-    top:40%;
+    top:50px;
     left:-100%;
     text-align:center;
     font-size:50px;
     color:white;
     opacity:0;
-    z-index:100;
-     animation:texte3 1s ease-in 1s forwards;
+    z-index:200;
+    animation:texte3 1s ease-in 1s forwards;
     
 }
 @keyframes texte3{
@@ -142,7 +142,7 @@ p{
         font-size:130px;
     }
     p{
-        top:35%;
+        top:50px;
     }
 }
 @media screen and (max-width:768px){
@@ -151,7 +151,7 @@ p{
         top:50%;
     }
         p{
-        top:70%;
+        top:50px;
     }
 }
 
